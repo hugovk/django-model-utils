@@ -30,7 +30,10 @@ setup(
     url='https://github.com/jazzband/django-model-utils',
     packages=find_packages(exclude=['tests*']),
     python_requires=">=3.7",
-    install_requires=['Django>=3.2'],
+    install_requires=[
+        'Django>=3.2',
+        'setuptools; python_version >= "3.12"', # For pkg_resources
+    ],
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Environment :: Web Environment',
